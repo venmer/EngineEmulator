@@ -1,3 +1,7 @@
+package com.nrelectronics.handlers;
+
+import com.nrelectronics.app.COMRequest;
+
 public interface ICOMRequestProcessor {
 
     void setCOMRequest(COMRequest _request);

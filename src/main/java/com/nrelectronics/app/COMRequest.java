@@ -1,3 +1,5 @@
+package com.nrelectronics.app;
+
 public class COMRequest {
     private String message;
 

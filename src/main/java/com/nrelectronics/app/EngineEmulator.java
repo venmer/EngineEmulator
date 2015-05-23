@@ -1,3 +1,5 @@
+package com.nrelectronics.app;
+
 import jssc.SerialPort;
 import jssc.SerialPortException;
 import jssc.SerialPortList;
@@ -20,7 +22,7 @@ public class EngineEmulator {
         Scanner scanner;
 
         if (args.length > 0) {
-            portName = args[0].toUpperCase();
+            portName = args[0];
             baudRate = Integer.parseInt(args[1]);
             dataBits = Integer.parseInt(args[2]);
             stopBits = Integer.parseInt(args[3]);

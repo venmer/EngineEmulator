@@ -1,3 +1,7 @@
+package com.nrelectronics.app;
+
+import com.nrelectronics.handlers.ICOMRequestProcessor;
+
 public class ThreadWorker implements Runnable {
     private ICOMRequestProcessor processor;
 
@@ -7,7 +11,7 @@ public class ThreadWorker implements Runnable {
 
     @Override
     public void run() {
-        System.out.println("ThreadWorker.run() " + processor.getInfo());
+        System.out.println("com.nrelectronics.app.ThreadWorker.run() " + processor.getInfo());
         processor.processAsync();
     }
 }

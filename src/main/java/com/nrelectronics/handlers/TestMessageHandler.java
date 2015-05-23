@@ -1,3 +1,7 @@
+package com.nrelectronics.handlers;
+
+import com.nrelectronics.app.COMRequest;
+import com.nrelectronics.app.EngineEmulator;
 import jssc.SerialPortException;
 
 public class TestMessageHandler implements ICOMRequestProcessor {
@@ -14,11 +18,11 @@ public class TestMessageHandler implements ICOMRequestProcessor {
 
     @Override
     public String getInfo() {
-        return "ICOMRequestProcessor.getInfo()";
+        return "com.nrelectronics.handlers.ICOMRequestProcessor.getInfo()";
     }
 
     @Override
-    public void processAsync() {
+    public synchronized void processAsync() {
         System.out.println("Request msg: " + request.getMessage());
         String response = "RESPONSE";
         synchronized (EngineEmulator.serialPort) {

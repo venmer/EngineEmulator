@@ -1,3 +1,6 @@
+package com.nrelectronics.app;
+
+import com.nrelectronics.handlers.ICOMRequestProcessor;
 import jssc.SerialPortEvent;
 import jssc.SerialPortEventListener;
 import jssc.SerialPortException;
